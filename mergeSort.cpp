@@ -1,20 +1,23 @@
 #include <vector> 
 #include "sort.h"
 
-void merge(std::vector<int> &array, int left, int mid, int right)
+void merge(std::vector<int> &array, int left, int middle, int right)
 {
 }
 
 void mergeSort(std::vector<int> &array, int left, int right) 
 {
-	int mid;
+	int middle;
 	if(left<right)
 	{
-		mid = (left+right)/2;
+		middle = (left+right)/2;
 
-		mergeSort(array, left, mid);
-		mergeSort(array, mid+1, right);
+		mergeSort(array, left, middle);
+		mergeSort(array, middle+1, right);
 
-		merge(array, left, mid, right);
+		merge(array, left, middle, right);
 	}
 }
+
+//changed mid to middle
+//
